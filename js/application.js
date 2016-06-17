@@ -58,24 +58,19 @@ for (var i=0; i < 4; i++){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#7cf975");
       cell.css("color", "#333333");
-
-
     }else if(nestedArr[i][j] === 32){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#74c4db");
-
   }else if(nestedArr[i][j] === 64){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#a6fc94");
-
   }else if(nestedArr[i][j] === 128){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#71fc6f");
-
   }else if(nestedArr[i][j] === 256){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#ffdd66");
-        $("#header").append("<h2>you won!</h2>");
+        $("#header").append("<h2 class="fadeInLeft">you won!</h2>");
       $("#header h2").animate({
             right: '250px',
             opacity: '0.5',
@@ -145,6 +140,7 @@ Game.prototype.compareBoards=function(){
     this.addRandomNumber();
   }else{
     this.addRandomNumber();
+    this.isLost();
     this.setUpBoardElements();
   };
 }
@@ -162,3 +158,33 @@ function addNums(row){
   return row;
 }
 
+Game.prototype.allFull=function(){
+  var counter = 0
+  for (var i=0; i<4; i++){
+    if (this.board[i].indexOf("") == -1){
+      counter ++;
+    }
+  }
+  if (counter == 4){
+    return true;
+  }
+}
+Game.prototype.sameNumAdjacents=function(){
+  var counter=0;
+    for (var i=0; i<4; i++){
+      for (var j=0;j<4; j++){
+      if (this.board[i][j] == this.board[i][j+1]){
+        counter++;
+      }
+      }
+    }
+    if (counter > 0){
+      return true;
+    }
+}
+
+Game.prototype.isLost=function(){
+  if (this.allFull() && !(this.sameNumAdjacents())){
+    $("#header").append("<h2 class="fadeInLeft">bummer, you lost!</h2>");
+  }
+}
