@@ -1,8 +1,8 @@
-$(window).ready(function() {
+$(document).ready(function() {
 var game = new Game();
 game.setUpBoardElements();
 
-$(window).keydown(function(e){
+$("body").keydown(function(e){
   game.initBoard= _.clone(game.board)
   if(e.keyCode == 37){
 
