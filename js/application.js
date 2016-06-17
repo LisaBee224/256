@@ -65,6 +65,19 @@ for (var i=0; i < 4; i++){
       cell.css("background-color", "#74c4db");
 
   }
+  else if(nestedArr[i][j] === 64){
+      cell.text(nestedArr[i][j])
+      cell.css("background-color", "#a6fc94");
+
+  }else if(nestedArr[i][j] === 128){
+      cell.text(nestedArr[i][j])
+      cell.css("background-color", "#71fc6f");
+
+  }else if(nestedArr[i][j] === 256){
+      cell.text(nestedArr[i][j])
+      cell.css("background-color", "#ffdd66");
+
+  }
     else{
       cell.text(nestedArr[i][j])
      }
