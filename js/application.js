@@ -62,7 +62,7 @@ for (var i=0; i < 4; i++){
       $("#header h2").animate({
             right: '250px',
             opacity: '0.5',
-            color: '#ff1c60;
+            color: '#ff1c60'
         });
       setTimeout(function() { location.reload() },2500);
     }else if(nestedArr[i][j] === 32){
