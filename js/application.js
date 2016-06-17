@@ -58,12 +58,7 @@ for (var i=0; i < 4; i++){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#7cf975");
       cell.css("color", "#333333");
-      $("#header").append("<h2>you won!</h2>");
-      $("#header h2").animate({
-            right: '250px',
-            opacity: '0.5',
-            color: '#ff1c60'
-        });
+
       setTimeout(function() { location.reload() },2500);
     }else if(nestedArr[i][j] === 32){
       cell.text(nestedArr[i][j])
@@ -80,6 +75,12 @@ for (var i=0; i < 4; i++){
   }else if(nestedArr[i][j] === 256){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#ffdd66");
+        $("#header").append("<h2>you won!</h2>");
+      $("#header h2").animate({
+            right: '250px',
+            opacity: '0.5',
+            color: '#ff1c60'
+        });
 
   }else{
       cell.text(nestedArr[i][j])
