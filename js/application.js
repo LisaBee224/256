@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).ready(function() {
 var game = new Game();
 game.setUpBoardElements();
 
