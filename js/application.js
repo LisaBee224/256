@@ -59,7 +59,7 @@ for (var i=0; i < 4; i++){
       cell.css("background-color", "#7cf975");
       cell.css("color", "#333333");
 
-      setTimeout(function() { location.reload() },2500);
+
     }else if(nestedArr[i][j] === 32){
       cell.text(nestedArr[i][j])
       cell.css("background-color", "#74c4db");
@@ -81,6 +81,7 @@ for (var i=0; i < 4; i++){
             opacity: '0.5',
             color: '#ff1c60'
         });
+       setTimeout(function() { location.reload() },2500);
 
   }else{
       cell.text(nestedArr[i][j])
@@ -161,6 +162,3 @@ function addNums(row){
   return row;
 }
 
-Game.prototype.isWon = function(){
-
-}
