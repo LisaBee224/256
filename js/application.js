@@ -2,7 +2,7 @@ $(window).ready(function() {
 var game = new Game();
 game.setUpBoardElements();
 
-$("body").keydown(function(e){
+$(window).keydown(function(e){
   game.initBoard= _.clone(game.board)
   if(e.keyCode == 37){
 
