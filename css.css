@@ -14,6 +14,7 @@ td{
   font-family: 'Open Sans', sans-serif;
 }
 table{
+<<<<<<< HEAD
 
   width: 800px;
   margin:0 auto;
@@ -40,3 +41,8 @@ table{
   }
 }
 
+=======
+  width: 800px;
+  margin:0 auto;
+}
+>>>>>>> master
